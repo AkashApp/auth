@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 97.5vw;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+/*************  ✨ Windsurf Command 🌟  *************/
+    .nav-link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+        margin-right: 10px;
+        transition: all 0.5s ease-in-out;
+
+        &:hover{
+            background-color: #7fb4bb;
+        }
+    }
+/*******  44ef57e4-33ad-4346-8214-372c78e43b94  *******/
+}
