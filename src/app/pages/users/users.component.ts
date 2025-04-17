@@ -23,10 +23,16 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  search(term: string) {
-    this.filteredUsers = this.users.filter(user =>
-      user.firstName.toLowerCase().includes(term.toLowerCase()) ||
-      user.lastName.toLowerCase().includes(term.toLowerCase())
-    );
+  search(input: any) {
+    let term = input.target.value;
+    if (typeof term === 'string') {
+      this.filteredUsers = this.users.filter(user =>
+        user.firstName.toLowerCase().includes(term.toLowerCase()) ||
+        user.lastName.toLowerCase().includes(term.toLowerCase())
+      );
+    }
+    else{
+      alert("enter the value into searchbar");
+    }
   }
 }
