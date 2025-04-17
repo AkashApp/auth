@@ -1,28 +1,28 @@
 <div class="container">
     <h2>User Table</h2>
-    <div>
+    <div class="button-container">
         <button (click)="sortPrice('asc')" class="button">Sort by Price Ascending</button>
         <button (click)="sortPrice('desc')" class="button">Sort by Price Descending</button>
     </div>
-    <table>
+    <table class="table">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Category</th>
-          <th>Price (USD)</th>
-          <th>Image</th>
+          <th class="header">ID</th>
+          <th class="header">Title</th>
+          <th class="header">Description</th>
+          <th class="header">Category</th>
+          <th class="header">Price (USD)</th>
+          <th class="header">Image</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let product of products">
-          <td>{{ product.id }}</td>
-          <td>{{ product.title }}</td>
-          <td>{{ product.description }}</td>
-          <td>{{ product.category }}</td>
-          <td>{{ product.price }}</td>
-          <td>
+          <td class="body">{{ product.id }}</td>
+          <td class="body">{{ product.title }}</td>
+          <td class="body">{{ product.description }}</td>
+          <td class="body">{{ product.category }}</td>
+          <td class="body">{{ product.price }}</td>
+          <td class="body">
             <img [src]="product.thumbnail" alt="Product Image" width="50">
             <button>Update</button>
           </td>
