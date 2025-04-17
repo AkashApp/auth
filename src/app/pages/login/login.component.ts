@@ -19,8 +19,8 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid){
       this.commonService.login(this.loginForm.value.username!, this.loginForm.value.password!).subscribe({
-        next: (res) => {
-          localStorage.setItem('token', res.token);
+        next: async (res) => {
+          await localStorage.setItem('token', res.refreshToken);
           this.router.navigate(['/profile']);
         },
         error: (err) => {

@@ -1,14 +1,16 @@
 <div class="container">
     <div class="cardContainer">
-        <div>
-            <div></div>
+        <div class="upper">
+            <div class = "circle">
+                <img [src]="user.image" alt="User Image">
+            </div>
         </div>
-        <div>
-            <p>Name: {{ user.firstName }} {{ user.lastName }}</p>
-            <p>Username: {{ user.username }}</p>
+        <div class="lower">
+            <p>{{ user.firstName }} {{ user.lastName }}</p>
+            <p>{{ user.username }}</p>
             <p>Gender: {{ user.gender }}</p>
-            <p>Email: {{ user.email }}</p>
-            <button (click)="logout()">Logout</button>
+            <p>{{ user.email }}</p>
+            <button (click)="logout()" class="button">Logout</button>
         </div>
     </div>
 </div>

@@ -10,6 +10,9 @@ export class CommonService {
 
   private LoginApiUrl = 'https://dummyjson.com/auth/login';
   private UserApiUrl = 'https://dummyjson.com/auth/me';
+  private AllUserApiUrl = 'https://dummyjson.com/users';
+  private AllProductsApiUrl = 'https://dummyjson.com/products';
+
 
   constructor(private http: HttpClient) {
     this.token = localStorage.getItem('token');
@@ -27,5 +30,13 @@ export class CommonService {
     });
 
     return this.http.get<any>(this.UserApiUrl, { headers })
+  }
+
+  getAllUsers(): Observable<any>{
+    return this.http.get<any>(this.AllUserApiUrl)
+  }
+
+  getAllProducts(): Observable<any>{
+    return this.http.get<any>(this.AllProductsApiUrl)
   }
 }
